@@ -320,12 +320,13 @@ Feel free to change the text of `demo.html` (i.e. making a "local" change) and
 then use `scp` to put it on the remote server. Exploration is healthy when
 learning this stuff!
 
-## ADVANCED: Synchronizing Directories
+## Synchronizing Directories and All Their Subdirectories
 
 As we build more complex sites, we might want to synchronize whole directories
-instead of one-file-at-a-time. For this we can use a tool called `rsync` that
-"rides on top of" the SFTP/SCP layer. `rsync` will do some housekeeping for you
-before basically doing what we just did by hand.
+and their subdirectories (a fancy term for this is "recursively") instead of
+one-file-at-a-time. For this we can use a tool called `rsync` that "rides on
+top of" the SFTP/SCP layer. `rsync` will do some housekeeping for you before
+basically doing what we just did by hand.
 
 In this lesson we've provided a slightly more complex site in the
 `complex_site` directory. Here's how we "synchronize" it to our remote,
@@ -337,9 +338,14 @@ This means "rsync" (you can ignore the `-azP` flag, they're details at this
 point) send all (`*`) the contents of `complex_site` over to my server and put
 them in `public_html`.
 
-If you sync those contents, you should see the following on your server:
+If you sync `complex_site` to your server and refresh your browser page you
+should now see:
 
 ![Final product](./img/rsync_final.png)
+
+While we're going to start with simple and single HTML files, this command will
+rapidly become your favorite as it keep track of changes and updates the fewest
+files possible, as quickly as possible.
 
 ## A Word About Security
 
