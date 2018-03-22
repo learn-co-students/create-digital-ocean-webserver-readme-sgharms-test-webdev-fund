@@ -66,23 +66,23 @@ In "Bird by Bird" Anne Lamott wrote:
 Just like dozens of _other_ services you've signed up for, create an account at
 DO:
 
-![Sign up at DO](./img/DO_1_Signup.png)
+![Sign up at DO](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_1_Signup.png)
 
 ### Step 1B: Verify Your Account via Email
 
-![Confirm Email](./img/DO_2_Verify.png)
+![Confirm Email](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_2_Verify.png)
 
 ### Step 1C: Provide Payment Details
 
 Alas, this is the part where you have to give up some payment details!
 
-![Payment Details](./img/DO_3_Payment_Details.png)
+![Payment Details](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_3_Payment_Details.png)
 
 ### Step 1D: Redirected to a Prompt to Create a Droplet
 
 We're ready to create a droplet!
 
-![Create Droplet Prompt](./img/DO_4_Create_Droplet.png)
+![Create Droplet Prompt](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_4_Create_Droplet.png)
 
 ### Step 1E: Create the Droplet
 
@@ -104,7 +104,7 @@ it's usually rather machine-y and hard to remember
 
 ### Step 1F: Wait
 
-![DO Provisions a Droplet](./img/DO_5_Creation.png)
+![DO Provisions a Droplet](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_5_Creation.png)
 
 Digital Ocean will now make a server for you. The fancy tech word for this is
 _"Provision"_ &mdash; fancy! You can imagine elves at DO building you a new
@@ -124,7 +124,7 @@ server being created here though.
 When the server has been "provisioned," DO will send you an email confirming
 that the host has been created. Inside this email you'll be given:
 
-![DO Droplet Complete Email](./img/DO_6_Done.png)
+![DO Droplet Complete Email](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_6_Done.png)
 
 * **IP Address**: make a note of it
 * **Username**: root
@@ -152,7 +152,7 @@ From your LearnIDE Terminal type:
 Accept the warning, it's OK. It's asking: "You never went here before, are you
 sure this is where you mean to go?"
 
-![Log In as Root](./img/DO_7_Root-Login.png)
+![Log In as Root](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_7_Root-Login.png)
 
 Provide the password given in the email in step 1G.
 
@@ -169,7 +169,7 @@ is a not-entirely-safe place. DO advises in their email:
 > common words, such as “Mousetrap Sandwich Hospital Anecdote,” tend to work
 > well, too.
 
-![Change the root Password](./img/DO_8_Root-pw-change.png)
+![Change the root Password](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_8_Root-pw-change.png)
 
 Now, determine an "unprivileged" account name. It's usually something less than or
 equal to 8 characters long. `flastname` or `byronpoodle` or `poodlluvr` are all
@@ -187,14 +187,14 @@ apply.
 Come back here when you're done, but the process should look something like
 this:
 
-![Change the root Password](./img/DO_9_Unpriv-User.png)
+![Change the root Password](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_9_Unpriv-User.png)
 
 ### Step 1I: Log In As An Unprivileged User
 
 At this point, you're still logged into your droplet as `root`. Type `exit` to
 disconnect.
 
-![Logout as Root](./img/DO_10_Root-Logout.png)
+![Logout as Root](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_10_Root-Logout.png)
 
 Now, let's _re-connect_ with our new user.
 
@@ -204,7 +204,7 @@ From your LearnIDE Terminal type:
 
 and provide the password you created in Step 1H.
 
-![Logout as Root](./img/DO_11_Unpriv-Login.png)
+![Logout as Root](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_11_Unpriv-Login.png)
 
 Now you're logged into the remote host! Great job!
 
@@ -241,11 +241,11 @@ Type:
 1. `$ sudo apt-get update`
 2. Watch the Ubuntu operating system "update" its list of sources for
    downloading cool applications.
-3. It looks like this: [apt-get update running](./img/DO_12_apt-get-update.png)
+3. It looks like this: [apt-get update running](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_12_apt-get-update.png)
 4. `$ sudo apt-get install apache2`
 5. Get prompted to accept the download pack by hitting enter or `y`
-6. It looks like this: [apt-get install running](./img/DO_13_apt-get-install.png)
-7. Upon completion it looks like this: [apt-get install running](./img/DO_14_apt-get-end.png)
+6. It looks like this: [apt-get install running](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_13_apt-get-install.png)
+7. Upon completion it looks like this: [apt-get install running](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_14_apt-get-end.png)
 
 Last, visit the IP address you got in Step 1G, above in a web browser.
 
@@ -278,7 +278,7 @@ directory `public_html` at:
    `http://165.227.69.223/~poodlefan/`
 4. HOLY MOLY! You're serving a web page from your own server!
 
-![Served Web Page](./img/DO_15_hello-apache.png)
+![Served Web Page](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_15_hello-apache.png)
 
 You can change the message in the `echo` command above to be something more
 personal: `echo "Byron the poodle is the best" > $HOME/public_html/index.html`.
@@ -314,7 +314,7 @@ Reload `http://YOUR_IP_ADDRESS_FROM_1G/~poodlefan/`
 HOLY MOLY - You just synchronized a local file to a remote server, your server
 by hand!
 
-![Proof of scp working!](./img/DO_17_end.png)
+![Proof of scp working!](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/DO_17_end.png)
 
 Feel free to change the text of `demo.html` (i.e. making a "local" change) and
 then use `scp` to put it on the remote server. Exploration is healthy when
@@ -341,7 +341,7 @@ them in `public_html`.
 If you sync `complex_site` to your server and refresh your browser page you
 should now see:
 
-![Final product](./img/rsync_final.png)
+![Final product](https://curriculum-content.s3.amazonaws.com/fswb-assets/create-digital-ocean-webserver/rsync_final.png)
 
 While we're going to start with simple and single HTML files, this command will
 rapidly become your favorite as it keep track of changes and updates the fewest
