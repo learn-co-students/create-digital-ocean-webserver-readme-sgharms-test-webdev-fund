@@ -299,28 +299,25 @@ your creations on your droplet, your "production" environment.
 
 There are many options for doing this synchronization, but they are all built
 on top of this **most basic** flow: use a program called `sftp` (**S**ecure
-**F**ile **T**ransfer **P**rotocol) to make a copy from my local environment to
-my remote environment. Let's try it out.
+**F**ile **T**ransfer **P**rotocol) or its cousin `scp` (**S**ecurely
+**C**o**p**y) to make a copy from my local environment to my remote
+environment.
 
-In this lesson you are given a `demo.html` file. We're going to copy that file
+In this lesson, you are given a `demo.html` file. We're going to copy that file
 to your production environment, your new droplet, and save it on top of the
-existing `index.html` file. We're going to replace the index.html file we
-`echo`'d into existence in the previous step with this demo file.
+existing `index.html` file.
 
-![Opening SFTP to the Droplet](./img/DO_16_sftp.png)
+`$ scp demo.html unprivileged-account@you-server-ip:public_html/index.html`
 
-* `sftp unprivileged-account@you-server-ip` e.g. `sftp poodlefan@165.227.69.223`
-  instead of `ssh poodlefan@165.227.69.223`
-* `cd public_html`
-* `put demo.html index.html`
-* Reload `http://YOUR_IP_ADDRESS/~poodlefan/`
-* HOLY MOLY - You just synchronized a local file to a remote server, your
-  server!
+Reload `http://YOUR_IP_ADDRESS/~poodlefan/`
 
-![Proof of SFTP working!](./img/DO_17_end.png)
+HOLY MOLY - You just synchronized a local file to a remote server, your server
+by hand!
+
+![Proof of scp working!](./img/DO_17_end.png)
 
 Feel free to change the text of `demo.html` (i.e. making a "local" change) and
-then use `sftp` to `put` it on the remote server. Exploration is healthy when
+then use `scp` to put it on the remote server. Exploration is healthy when
 learning this stuff!
 
 ## A Word About Security
