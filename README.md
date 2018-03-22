@@ -309,7 +309,7 @@ existing `index.html` file.
 
 `$ scp demo.html unprivileged-account@you-server-ip:public_html/index.html`
 
-Reload `http://YOUR_IP_ADDRESS/~poodlefan/`
+Reload `http://YOUR_IP_ADDRESS_FROM_1G/~poodlefan/`
 
 HOLY MOLY - You just synchronized a local file to a remote server, your server
 by hand!
@@ -319,6 +319,27 @@ by hand!
 Feel free to change the text of `demo.html` (i.e. making a "local" change) and
 then use `scp` to put it on the remote server. Exploration is healthy when
 learning this stuff!
+
+## ADVANCED: Synchronizing Directories
+
+As we build more complex sites, we might want to synchronize whole directories
+instead of one-file-at-a-time. For this we can use a tool called `rsync` that
+"rides on top of" the SFTP/SCP layer. `rsync` will do some housekeeping for you
+before basically doing what we just did by hand.
+
+In this lesson we've provided a slightly more complex site in the
+`complex_site` directory. Here's how we "synchronize" it to our remote,
+production-environment directory:
+
+`rsync -azP ./complex_site/* unprivileged-account@YOUR_IP_ADDRESS_FROM_1G:public_html`
+
+This means "rsync" (you can ignore the `-azP` flag, they're details at this
+point) send all (`*`) the contents of `complex_site` over to my server and put
+them in `public_html`.
+
+If you sync those contents, you should see the following on your server:
+
+![Final product](./img/rsync_final.png)
 
 ## A Word About Security
 
@@ -340,7 +361,6 @@ created a user account, configured a web server, and moved your own content!
 
 We'll keep tuning our workflow as our sites get more complicated, but this is a
 huge moment! Congratulations!
-
 
 [Guide]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
 [a2ig]: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
