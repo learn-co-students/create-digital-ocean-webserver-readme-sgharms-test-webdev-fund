@@ -267,16 +267,16 @@ directory `public_html` at:
 `http://IP_ADDRESS_FROM_STEP_1G/~UNPRIVILEGED_USER_NAME`
 
 1. Tell Apache to serve unprivileged users' `public_html` directories
-  1. `$ sudo ln -s /etc/apache2/mods-available/userdir.conf /etc/apache2/mods-enabled/userdir.conf`
-  2. `$ sudo ln -s /etc/apache2/mods-available/userdir.load /etc/apache2/mods-enabled/userdir.load`
-  4. `sudo /etc/init.d/apache2 restart`
+  * `$ sudo ln -s /etc/apache2/mods-available/userdir.conf /etc/apache2/mods-enabled/userdir.conf`
+  * `$ sudo ln -s /etc/apache2/mods-available/userdir.load /etc/apache2/mods-enabled/userdir.load`
+  * `sudo /etc/init.d/apache2 restart`
 2. Configure the unprivileged account's `public_html` directory
-  1. `$ cd`
-  2. `$ mkdir $HOME/public_html`
-  3. `$ echo "Hello, World from my web sever!" > $HOME/public_html/index.html`
-6. Visit the IP address from step 1G with `/~username` at the end. For example:
+  * `$ cd`
+  * `$ mkdir $HOME/public_html`
+  * `$ echo "Hello, World from my web sever!" > $HOME/public_html/index.html`
+3. Visit the IP address from step 1G with `/~username` at the end. For example:
    `http://165.227.69.223/~poodlefan/`
-7. HOLY MOLY! You're serving a web page from your own server!
+4. HOLY MOLY! You're serving a web page from your own server!
 
 ![Served Web Page](./img/DO_15_hello-apache.png)
 
